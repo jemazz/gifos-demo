@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GIFOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles/css/index.css" rel="stylesheet">
+  <!--   <link href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body id="body">
+    <header>
+        <nav class="ctnNav" id="ctnNav">
+            <img class="logo" id="logo" alt="Logo" src="./assets/logo-mobile.svg">
+            <div class="ctnBurger">
+                <input type="checkbox" class="checkBurger" id="checkBurger">
+                <img class="close" id="close" alt="Cerrar" src="assets/close.svg">
+                <img class="burger" id="burger" alt="Menu" src="./assets/burger.svg">
+                <div class="menuBurger" id="menuBurger">
+                    <div class="links">
+                        <a class="opt" id="darkLight">Modo Nocturno
+                            <div class="borderMenu"></div>
+                        </a>
+                        <a class="opt" id="favorites">Favoritos
+                            <div class="borderMenu"></div>
+                        </a>
+                        <a class="opt" id="gifos">Mis GIFOS
+                            <div class="borderMenu"></div>
+                        </a>
+                        <img class="crearGifo" id="crearGifo" alt="Crear Gifo" src="assets/button-crear-gifo.svg">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="ctnGral" id="ctnGral">
+        <h1 class="title">Inspírate, busca, <br class="brMobile">guarda, y crea<br class="brdesktop"> los<br
+                class="brMobile"> mejores<span class="gifos"> GIFOS</span></h1>
+        <div class="ctnSearch" id="ctnSearch">
+            <img class="imgSearchBar" alt="header" src="assets/ilustra_header.svg">
+            <div class="ctnSearchBar" id="ctnSearchBar">
+                <input class="searchBar" id="searchBar" type="text" placeholder="Busca GIFOS y más">
+                <img class="iconSearch" alt="Icono de busqueda" id="iconSearch" src="assets/icon-search.svg">
+            </div>
+        </div>
+    </div>
+    <div class="trending" id="trending">
+        <div class="tileTrending">Trending:</div>
+        <p class="pTrending">Reactions, Entertainment,<br class="brMobile"> Sports, Stickers, Artists</p>
+    </div>
+    <div id="headerSearch">
+
+    </div>
+    <div id="gifCtn">
+    </div>
+    <div class="gralFavorites" id="gralFavorites">
+        <div class="ctnFavorites">
+            <img src="./assets/icon-favoritos.svg" alt="Favoritos" id="imgFavorites">
+            <span class="tileFavorites">Favoritos</span>
+            <div class="favSinCont" id="favSinCont">
+                <img id="imgFavSinCont" src="./assets/icon-fav-sin-contenido.svg" alt="Favoritos sin contenido">
+                <p class="textSinFavDesk" id="textSinFavDesk">¡Guarda tu primer GIFO en Favoritos <br>
+                    para que se muestre aquí!</p>
+            </div>
+            <div class='ctnAmp' id='ctnAmp'></div>
+            <div class="gifFav" id="gifFav">
+                <template id="templateGifFav">
+                    <ctnImg class="ctnImgFav" id="ctnImgFav">
+                        <img class="imgGifFav">
+                        <div class="ctnIconSearchGifosFav" id="ctnIconSearchGifosFav">
+                            <img class="icnSearch" id="icnFav1" src="./assets/icon-fav.svg" alt="Favorito">
+                            <img class="icnSearch" id="icnDescargar1" src="./assets/icon-download.svg" alt="Descargar">
+                            <img class="icnSearch" id="icnAmpliar1" src="./assets/icon-max-normal.svg" alt="Ampliar">
+                        </div>
+                        <div class="peliculaFav"></div>
+                    </ctnImg>
+                </template>
+            </div>
+        </div>
+    </div>
+    <div class="gralMisGifos" id="gralMisGifos">
+        <div class="ctnMisGifos">
+            <img src="./assets/icon-mis-gifos.svg" alt="Mis Gifos" id="imgMisGifos">
+            <span class="tileMisGifos" id="tileMisGifos">Mis Gifos</span>
+        </div>
+    </div>
+
+    <div class='ctnAmG' id='ctnAmpG'></div>
+    <div class='gifosCont' id="gifosCont">
+        <template id="templateGif">
+            <ctnImg class="ctnImg" id="ctnImg">
+                <img class="imgGif" id="imgGif">
+                <div class="ctnIconSearchGifos" id="ctnIconSearchGifos">
+                    <img class="icnSearch" id="icnFav" src="./assets/icon-fav.svg" alt="Favorito">
+                    <img class="icnSearch" id="icnDescargar" src="./assets/icon-download.svg" alt="Descargar">
+                    <img class="icnSearch" id="icnAmpliar" src="./assets/icon-max-normal.svg" alt="Ampliar">
+                </div>
+                <div class="pelicula"></div>
+            </ctnImg>
+
+        </template>
+        <button class='btnVerMas' id="btnVerMasGif">VER MÁS</button>
+    </div>
+
+    <div class="ctnBtnVerMasGif">
+        <button class="btnVerMas" id="btnVerMasFavGif">VER MÁS</button>
+    </div>
+    <div class="gifSinCont" id="gifSinCont">
+        <img id="imgGifSinCont" src="./assets/icon-mis-gifos-sin-contenido.svg" alt="Gifos sin contenido">
+        <p class="textSinGifDesk" id="textSinGifDesk">¡Anímate a crear tu primer GIFO!</p>
+    </div>
+    <div id="misGifos">
+        <div class='ctnAmpCreados' id='ctnAmpCreados'></div>
+        <div class="gifosCreadosCont" id="gifosCreadosCont">
+            <template id="templateGifosCreados">
+                <ctnImg class="ctnImgGifosCreados" id="ctnImgGifosCreados">
+                    <img class="imgGifosCreados">
+                    <div class="ctnIconSearchGifosCreados" id="ctnIconSearchGifosCreados">
+                        <img class="icnSearch" id="icnEliminar" src="./assets/icon-trash-hover.svg" alt="Eliminar">
+                        <img class="icnSearch" id="icnDescargar2" src="./assets/icon-download.svg" alt="Descargar">
+                        <img class="icnSearch" id="icnAmpliar2" src="./assets/icon-max-normal.svg" alt="Ampliar">
+                    </div>
+                    <div class="peliculaCreados"></div>
+                </ctnImg>
+            </template>
+            <button class='btnVerMas' id="btnVerMasGifos">VER MÁS</button>
+        </div>
+    </div>
+    <div class="trendingGifos" id="trendingGifos">
+        <div class="titletrendingGifos" id="titletrendingGifos">Trending GIFOS</div>
+        <p class="pTGifos" id="pTGifos">Mira los últimos<br class="brMobile"> GIFOS de nuestra comunidad.</p>
+        <div class="ctnGrifos" id="ctnGrifos">
+            <div class='gifosContScroll' id='gifosContScroll'></div>
+            <div class='ctnLeftRight' id='ctnLeftRight'></div>
+        </div>
+    </div>
+    <div class="ctnGralCrearGifo" id="ctnGralCrearGifo">
+        <div class="ctnGralCamara" id="ctnGralCamara"></div>
+        <div class="ctnCentralCrearGifo" id="ctnCentralCrearGifo">
+            <div class="rectangulo" id="rectangulo">
+                <video class="video" id="video"></video>
+                <div id="paso0">
+                    <div class='titleCrearGifo'>Aquí podrás <br> crear tus propios <span class="gifos">GIFOS</span>
+                    </div>
+                    <span class='subTitleCrearGifo'>¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para
+                        grabar un video)</span>
+                </div>
+                <div id="paso1">
+                    <div class='titleCrearGifo'>¿Nos das acceso <br> a tu cámara?</div>
+                    <span class='subTitleCrearGifo'>El acceso a tu cámara será válido sólo<br> por el tiempo en el que
+                        estés creando el grifo</span>
+                </div>
+                <div id="paso2"></div>
+
+            </div>
+            <div class="btnesCrearGifo" id="btnesCrearGifo">
+                <button class='pasos' id="p1">1</button>
+                <button class='pasos' id="p2">2</button>
+                <button class='pasos' id="p3">3</button>
+                <div class="timer" id="timer"></div>
+            </div>
+            <div class='CtnRepetirCaptura' id='CtnRepetirCaptura'>
+                <p id='repetirCaptura'>REPETIR CAPTURA</p>
+                <div class='subRepetir' id='subRepetir'></div>
+            </div>
+        </div>
+    </div>
+    <div class="ctnSeparador" id="ctnSeparador">
+        <div class="separador" id='separador'></div>
+        <button class='btn' id='btnComenzar'>COMENZAR</button>
+        <button class='btn' id='btnGrabar'>GRABAR</button>
+        <button class='btn' id='btnFinalizar'>FINALIZAR</button>
+        <button class='btn' id='btnSubirGifo'>SUBIR GIFO</button>
+    </div>
+    <footer>
+        <div class="ctnFooter">
+            <div class="redes">
+                <div class="ctnRedes">
+                    <div class="titleCompartir">Compartir en:</div>
+                    <div class="iconos">
+                        <a href="https://www.facebook.com/"><img class="iFace" alt="Facebook" id="iFace"
+                                src="./assets/icon_facebook.svg"></a>
+                        <a href="https://twitter.com/"><img class="iTwi" alt="Twitter" id="iTwi"
+                                src="./assets/icon-twitter.svg"></a>
+                        <a href="https://www.instagram.com/"><img class="iInst" alt="Instagram" id="iInst"
+                                src="./assets/icon_instagram.svg"></a>
+                    </div>
+                </div>
+                <span class="footText">© GIFOS 2020 All Rights Reserved.</span>
+            </div>
+
+        </div>
+    </footer>
+    <script src="./styles/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+</body>
+
+</html>
