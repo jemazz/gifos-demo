@@ -1,0 +1,1219 @@
+/* @import "../sass/variables"; */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow-x: hidden;
+  font-family: "Montserrat";
+  color: #572EE5;
+}
+
+body {
+  background-color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+body.dark {
+  background-color: #37383C;
+  transition: background-color 0.3s;
+}
+
+#ctnIconSearchGifosFav,
+#ctnIconSearchGifos,
+.menuBurger,
+.gralFavorites,
+.gralMisGifos,
+#ctnGralCrearGifo,
+#ctnSeparador,
+#paso1,
+#btnGrabar,
+#btnFinalizar,
+#video,
+#btnSubirGifo,
+#CtnRepetirCaptura,
+#gifosCont,
+#btnVerMasFavGif,
+#btnVerMasGif,
+.favSinCont,
+.gifSinCont,
+.ctnAmp,
+#ctnAmp,
+.ctnAmpG,
+#ctnAmpG {
+  display: none;
+}
+
+.brdesktop {
+  display: none;
+}
+
+.crearGifo {
+  display: none;
+}
+
+.ctnNav {
+  position: relative;
+  border-top: solid 5px;
+  transition: border-color 0.3s;
+}
+.dark .ctnNav {
+  border-color: #000000;
+  transition: border-color 0.3s;
+}
+
+.logo {
+  z-index: 1;
+  position: absolute;
+  top: 29px;
+  left: 22px;
+  width: 48.8px;
+  height: 48.8px;
+}
+
+.ctnBurger {
+  position: relative;
+  min-width: 375px;
+  min-height: 95px;
+  width: 100%;
+  height: 100%;
+}
+
+.checkBurger {
+  position: absolute;
+  top: 47px;
+  right: 41px;
+  width: 15px;
+  height: 14px;
+  opacity: 0;
+}
+
+.close {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 47px;
+  right: 41px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.burger {
+  position: absolute;
+  top: 47px;
+  right: 41px;
+  width: 15px;
+  height: 14px;
+  pointer-events: none;
+}
+
+.menuBurger {
+  display: none;
+  position: absolute;
+}
+
+.links {
+  padding-top: 17px;
+  min-width: 375px;
+  height: 538px;
+  margin-top: 95px;
+  background-color: #572EE5;
+  opacity: 50%;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.dark .links {
+  background-color: #000000;
+  transition: background-color 0.3s;
+  opacity: 100%;
+}
+
+.menuBurger .opt {
+  background-color: #572EE5;
+  position: relative;
+  display: block;
+  color: #FFFFFF;
+  line-height: 30px;
+  height: 60px;
+  padding-top: 22.5px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+.dark .menuBurger .opt {
+  background-color: #000000;
+  transition: background-color 0.3s;
+}
+
+.borderMenu {
+  position: absolute;
+  top: 52px;
+  opacity: 50%;
+  width: 41px;
+  height: 1px;
+  background-color: #FFFFFF;
+  margin: center;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 31px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 33px;
+  transition: background-color 0.3s;
+}
+.dark .title {
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+.gifos {
+  color: #5ED7C6;
+}
+
+.ctnSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 31px;
+}
+
+.imgSearchBar {
+  width: 273px;
+  height: 130px;
+}
+
+.ctnSearchBar {
+  position: relative;
+  width: 334px;
+  height: 50px;
+}
+
+.searchBar {
+  outline: none;
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 19px;
+  font-size: 16px;
+  border-radius: 27px;
+  border: 1px solid #572EE5;
+  padding-left: 55px;
+  display: block;
+  width: 334px;
+  height: 50px;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+}
+.dark .searchBar {
+  background-color: #37383C;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+}
+
+#ctnSugeridas {
+  padding-top: 20px;
+  position: absolute;
+  width: 334px;
+  height: 150px;
+  padding-left: 26px;
+  top: 366px;
+  z-index: 1000;
+  border-radius: 27px;
+  background-color: white;
+  border: 1px solid #572EE5;
+  line-height: 22px;
+}
+
+.iconSearch {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+#elemento {
+  left: 10px;
+  margin-top: 10px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  color: #9CAFC3;
+}
+
+.trending {
+  text-align: center;
+}
+
+.tileTrending {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 2px;
+  transition: background-color 0.3s;
+}
+.dark .tileTrending {
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+.pTrending {
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.dark .pTrending {
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+.line {
+  width: 157px;
+  height: 1px;
+  opacity: 50%;
+  margin: auto;
+  background-color: #9CAFC3;
+  margin-top: 35px;
+  margin-bottom: 43px;
+}
+
+.input {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 66px;
+  transition: background-color 0.3s;
+}
+.dark .input {
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+.imgSinRes {
+  margin: auto;
+  width: 20%;
+  display: block;
+  margin-top: 20px;
+}
+
+.infosinRes {
+  display: block;
+  text-align: center;
+  color: #50E3C2;
+  margin-top: 20px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.gifosCont,
+.gifosCreadosCont,
+.gifFav {
+  display: grid;
+  justify-content: center;
+  padding-top: 38px;
+  margin-left: 21px;
+  margin-right: 21px;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 25px;
+}
+
+.ctnImg, .ctnImgFav, .ctnImgGifosCreados {
+  position: relative;
+}
+
+.imgGif, .imgGifFav, .imgGifosCreados {
+  min-width: 156px;
+  width: 100%;
+  max-width: 250px;
+  height: 120px;
+}
+
+.ctnBtnVerMasGif {
+  display: flex;
+  justify-content: center;
+}
+
+.btnVerMas, #btnVerMasGifos {
+  margin-bottom: 33px;
+}
+body.dark .btnVerMas, body.dark #btnVerMasGifos {
+  color: #222326;
+  border: 1px solid #222326;
+}
+
+.trendingGifos {
+  height: 430px;
+  overflow-x: auto;
+  background-color: #F3F5F8;
+  margin-top: 90px;
+  padding-top: 46px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.dark .trendingGifos {
+  background-color: #222326;
+  transition: background-color 0.3s;
+}
+
+.titletrendingGifos {
+  background-color: #F3F5F8;
+  margin-bottom: 7px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  transition: background-color 0.3s;
+}
+.dark .titletrendingGifos {
+  background-color: #222326;
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+.pTGifos {
+  background-color: #F3F5F8;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #000000;
+  margin-bottom: 32px;
+  transition-property: background-color, color;
+  transition-duration: 0.3s, 0.3s;
+}
+.dark .pTGifos {
+  background-color: #222326;
+  color: #FFFFFF;
+  transition-property: background-color, color;
+  transition-duration: 0.3s, 0.3s;
+}
+
+.ctnGrifos {
+  display: relative;
+  overflow: hidden;
+}
+
+.gifosContScroll {
+  background-color: #F3F5F8;
+  overflow: scroll;
+  width: 100%;
+  display: flex;
+  margin-left: 22px;
+  margin-right: 22px;
+  transition: background-color 0.3s;
+}
+.dark .gifosContScroll {
+  background-color: #222326;
+  transition: background-color 0.3s;
+}
+.gifosContScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.imagenesTrending {
+  display: inline-block;
+  min-width: 243px;
+  height: 187px;
+  margin: 0 22px 0 0;
+}
+
+#buttonSliderLeft,
+#buttonSliderRight {
+  display: none;
+}
+
+.dark footer {
+  background-color: #37383C;
+  transition: background-color 0.3s;
+}
+
+.ctnFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 47px;
+  border-bottom: solid 5px;
+}
+.dark .ctnFooter {
+  background-color: #37383C;
+  border-bottom-color: #000000;
+}
+
+.redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleCompartir {
+  font-family: "Roboto";
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  transition: background-color 0.3s;
+}
+.dark .titleCompartir {
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+.iconos {
+  text-align: center;
+  padding-top: 22px;
+}
+
+.iFace,
+.iTwi {
+  padding-right: 19px;
+}
+
+.footText {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+  margin-top: 46px;
+  margin-bottom: 23px;
+  transition: background-color 0.3s;
+}
+.dark .footText {
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+#imgFavorites {
+  margin-top: 5px;
+  display: block;
+  margin: auto;
+}
+
+.tileFavorites {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-top: 7px;
+  margin-bottom: 46px;
+  transition: background-color 0.3s;
+}
+.dark .tileFavorites {
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+.btnVerMas, #btnVerMasGifos {
+  outline: none;
+  width: 127px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  display: block;
+  margin-top: 78px;
+}
+
+#imgMisGifos {
+  margin-top: 5px;
+  margin: auto;
+  display: block;
+}
+
+.tileMisGifos {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-top: 6px;
+  margin-bottom: 46px;
+  transition: background-color 0.3s;
+}
+.dark .tileMisGifos {
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+#btnVerMasGifos {
+  display: none;
+  margin: auto;
+  margin-bottom: 31px;
+  transition: background-color 0.3s;
+}
+.dark #btnVerMasGifos {
+  color: #6B7989;
+  border: 1px solid #6B7989;
+  transition: background-color 0.3s;
+}
+
+@media (min-width: 600px) {
+  #btnVerMasGifos,
+.brMobile {
+    display: none;
+  }
+
+  .brdesktop {
+    display: block;
+  }
+
+  .crearGifo {
+    display: none;
+  }
+
+  .gifosCont,
+.gifFav {
+    grid-template-columns: auto auto auto;
+  }
+
+  #ctnSugeridas {
+    top: 333px;
+  }
+}
+@media (min-width: 1440px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #ico {
+    opacity: 1;
+  }
+
+  .crearGifo {
+    display: contents;
+  }
+
+  .logo {
+    position: absolute;
+    top: 18px;
+    left: 156px;
+    width: 59.1px;
+    height: 59.1px;
+    z-index: 2;
+  }
+
+  .ctnBurger {
+    position: relative;
+    min-width: 1440px;
+    min-height: 90px;
+    height: 90px;
+    width: 100%;
+  }
+
+  .checkBurger,
+.close,
+.burger {
+    display: none;
+  }
+
+  .menuBurger {
+    display: contents;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    height: 90px;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: #FFFFFF;
+    opacity: 100%;
+    text-align: initial;
+    padding-left: 797px;
+    padding-top: 0px;
+    padding-right: 156px;
+    transition: background-color, 0.3s;
+  }
+  .dark .links {
+    background-color: #37383C;
+    transition: background-color, 0.3s;
+  }
+
+  .menuBurger .opt {
+    background-color: #FFFFFF;
+    display: inline-block;
+    color: #572EE5;
+    margin-top: 0px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: right;
+    padding-top: 41px;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+  }
+  .dark .menuBurger .opt {
+    background-color: #37383C;
+    color: #FFFFFF;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+  }
+  .menuBurger .opt.clickStyleFavDesk {
+    color: #9CAFC3;
+  }
+
+  .borderMenu {
+    display: none;
+  }
+
+  .crearGifo {
+    display: contents;
+    display: inline-block;
+    margin-top: 18px;
+    height: 54px;
+    width: 54px;
+  }
+
+  .title {
+    padding-top: 76px;
+    padding-bottom: 27px;
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .ctnSearch {
+    margin-bottom: 73px;
+  }
+
+  .imgSearchBar {
+    width: 399px;
+    height: 190px;
+  }
+
+  .ctnSearchBar {
+    width: 551px;
+    height: 50px;
+  }
+
+  .searchBar {
+    padding-left: 54px;
+    color: #9CAFC3;
+    width: 100%;
+    height: 100%;
+  }
+
+  #ctnSugeridas {
+    width: 551px;
+    height: 150px;
+    top: 366px;
+    margin-top: 121px;
+    padding-left: 33px;
+    background-color: white;
+  }
+
+  #elemento {
+    left: 10px;
+    margin-top: 10px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    color: #9CAFC3;
+  }
+
+  .iconSearch {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .tileTrending {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 7px;
+  }
+
+  .pTrending {
+    font-size: 16px;
+  }
+
+  .line {
+    width: 338px;
+    height: 1px;
+    margin: auto;
+    background-color: #9CAFC3;
+    margin-top: 105px;
+    margin-bottom: 40px;
+  }
+
+  .input {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 109px;
+  }
+
+  .imgSinRes {
+    margin: auto;
+    width: 150px;
+    display: block;
+  }
+
+  .infosinRes {
+    display: block;
+    text-align: center;
+    color: #50E3C2;
+    margin-top: 29px;
+    margin-bottom: 74px;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  .gifosCont, .gifFav, .gifosCreadosCont {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .imgGifFav, .imgGif, .imgGifCreados, .imgGifosCreados {
+    max-width: 260px;
+    height: 200px;
+  }
+
+  .pelicula, .peliculaFav, .peliculaCreados {
+    display: initial;
+    position: absolute;
+    top: 0;
+    margin-left: 0px;
+    max-width: 260px;
+    height: 200px;
+    min-width: 156px;
+    width: 100%;
+    background: #572EE5;
+    opacity: 70%;
+    z-index: 1;
+  }
+
+  .ctnIconSearchGifos,
+.ctnIconSearchGifosFav,
+.ctnIconSearchGifosCreados {
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+  }
+
+  .icnSearch {
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 32px;
+    width: 32px;
+    opacity: 70%;
+    border-radius: 6px;
+  }
+
+  #btnVerMasFavGif {
+    margin-top: 78px;
+  }
+
+  .trendingGifos {
+    display: flex;
+    flex-direction: column;
+    height: 640px;
+    background-color: #F3F5F8;
+    margin-top: 95px;
+    padding-top: 67px;
+  }
+
+  .titletrendingGifos {
+    margin-bottom: 12px;
+    font-size: 25px;
+  }
+
+  .pTGifos {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 53px;
+  }
+
+  .ctnGrifos {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gifosContScroll {
+    background-color: #F3F5F8;
+    overflow: hidden;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    padding-left: 22px;
+    transition: background-color 0.3s;
+  }
+  .dark .gifosContScroll {
+    background-color: #222326;
+    transition: background-color 0.3s;
+  }
+  .gifosContScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .imagenesTrending {
+    display: inline-block;
+    min-width: 357px;
+    height: 275px;
+    margin: 0 22px 0 0;
+  }
+
+  .ctnLeftRight {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #buttonSliderLeft {
+    display: initial;
+    width: 40px;
+    height: 40px;
+    margin-left: 94px;
+    margin-top: 117px;
+  }
+
+  #buttonSliderRight {
+    display: initial;
+    width: 40px;
+    height: 40px;
+    margin-right: 94px;
+    margin-top: 117px;
+  }
+
+  .ctnFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    padding-top: 26px;
+    height: 116px;
+    margin-top: 0px;
+  }
+
+  .ctnRedes {
+    display: flex;
+  }
+
+  .redes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    justify-content: space-between;
+  }
+
+  .titleCompartir {
+    font-size: 13px;
+    line-height: 15px;
+    padding-left: 156px;
+    padding-right: 17px;
+    height: 15px;
+  }
+
+  .iconos {
+    text-align: center;
+    padding-top: 0px;
+    height: 19px;
+  }
+
+  .iFace,
+.iTwi {
+    padding-right: 19px;
+  }
+
+  .footText {
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #000000;
+    line-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 158px;
+    height: 19px;
+  }
+
+  .imgFavorites {
+    margin-top: 11px;
+  }
+
+  .tileFavorites {
+    font-size: 25px;
+    margin-top: 8px;
+  }
+  .dark .tileFavorites {
+    color: #FFFFFF;
+  }
+
+  .favSinCont {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #imgFavSinCont {
+    width: 150px;
+    height: 151px;
+    margin: auto;
+    margin-top: 109.3px;
+    margin-bottom: 23.7px;
+  }
+
+  .textSinFavDesk {
+    font-size: 22px;
+    color: #50E3C2;
+    font-weight: 700;
+    line-height: 33px;
+  }
+
+  .btnVerMas, #btnVerMasGifos {
+    margin-bottom: 79px;
+  }
+  .dark .btnVerMas, .dark #btnVerMasGifos {
+    color: #6B7989;
+    border: 1px solid #6B7989;
+  }
+
+  .imgMisGifos {
+    margin-top: 10px;
+  }
+
+  .tileMisGifos {
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-top: 8.1px;
+    margin-bottom: 36px;
+    transition: background-color 0.3s;
+  }
+  .dark .tileMisGifos {
+    color: #FFFFFF;
+    transition: background-color 0.3s;
+  }
+
+  .gifSinCont {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #imgGifSinCont {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 111px;
+    margin-bottom: 40px;
+  }
+
+  .textSinGifDesk {
+    font-size: 22px;
+    color: #50E3C2;
+    font-weight: 700;
+    line-height: 25px;
+  }
+
+  .btnVerMas, #btnVerMasGifos {
+    margin: auto;
+    margin-bottom: 31px;
+    transition: background-color 0.3s;
+  }
+  .dark .btnVerMas, .dark #btnVerMasGifos {
+    color: #6B7989;
+    border: 1px solid #6B7989;
+    transition: background-color 0.3s;
+  }
+}
+.ctnGralCrearGifo {
+  flex-direction: row;
+}
+
+#ctnGralCamara {
+  margin-left: 241.8px;
+}
+
+#camara {
+  margin-top: 162px;
+  height: 106.8px;
+  opacity: 100%;
+}
+
+#luz {
+  margin-bottom: 5px;
+  margin-right: 4px;
+  height: 151px;
+  width: 91px;
+}
+
+#cinta1 {
+  position: absolute;
+  width: 45.9px;
+  top: 223.3px;
+  left: 228px;
+}
+
+#cinta2 {
+  position: absolute;
+  width: 63.6px;
+  top: 208.6px;
+  left: 277px;
+}
+
+.ctnCentralCrearGifo {
+  display: inline-block;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 67px;
+}
+
+.rectangulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 688px;
+  height: 390px;
+  border: 1px solid;
+  border-color: #572EE5;
+  opacity: 100%;
+}
+
+.titleCrearGifo {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 35px;
+  top: 138px;
+}
+
+.subTitleCrearGifo {
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 29px;
+  top: 207px;
+  color: #000000;
+}
+
+#gifoOk {
+  font-size: 15px;
+  line-height: 19px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.btnesCrearGifo {
+  display: flex;
+  justify-content: center;
+}
+
+.pasos {
+  outline: none;
+  width: 32px;
+  height: 32px;
+  border: 1px solid;
+  border-radius: 100%;
+  line-height: 21px;
+  font-size: 18px;
+  font-family: "Roboto";
+  font-weight: 700;
+  margin-top: 24px;
+  padding-top: 5px;
+  margin-right: 26px;
+  outline: none;
+}
+
+#cinta {
+  position: absolute;
+  margin-left: 1219px;
+  margin-top: 412px;
+  width: 87.2px;
+}
+
+.ctnSeparador {
+  flex-direction: column;
+  padding-left: 403px;
+}
+
+.separador {
+  width: 795.9px;
+  height: 6.9px;
+  opacity: 100%;
+  background-color: #572EE5;
+  margin-top: 19px;
+}
+
+.btn {
+  margin-top: 20.1px;
+  width: 127px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 25px;
+  border-color: #572EE5;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  opacity: 100%;
+  background-color: #FFFFFF;
+  margin-left: 310px;
+  outline: none;
+}
+
+.CtnRepetirCaptura {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#repetirCaptura {
+  position: absolute;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  right: 293px;
+  top: 559px;
+}
+
+.subRepetir {
+  width: 122.9px;
+  height: 1px;
+  opacity: 100%;
+  background-color: #5ED7C6;
+}
+
+#ctnAmp, #ctnAmpG, #ctnAmpCreados {
+  position: relative;
+  margin-top: -72px;
+  width: 695px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ampliar {
+  width: 90%;
+  height: 80%;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+.closeAmpl {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 3%;
+}
+
+/*# sourceMappingURL=index.css.map */

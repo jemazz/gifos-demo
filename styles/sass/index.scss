@@ -1,0 +1,1174 @@
+@import "../sass/variables";
+@import "../sass/reset";
+
+body {
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+    &.dark {
+        background-color: $colour-fondo-Noc;
+        transition: background-color 0.3s;
+    }
+}
+#ctnIconSearchGifosFav,
+#ctnIconSearchGifos,
+.menuBurger,
+.gralFavorites,
+.gralMisGifos,
+#ctnGralCrearGifo,
+#ctnSeparador,
+#paso1,
+#btnGrabar,
+#btnFinalizar,
+#video,
+#btnSubirGifo,
+#CtnRepetirCaptura,
+#gifosCont,
+#btnVerMasFavGif,
+#btnVerMasGif,
+.favSinCont,
+.gifSinCont,
+.ctnAmp,
+#ctnAmp,
+.ctnAmpG,
+#ctnAmpG {
+    display: none;
+}
+
+.brdesktop {
+    display: none;
+}
+.crearGifo {
+    display: none;
+}
+
+.ctnNav {
+    position: relative;
+    border-top: solid 5px;
+    transition: border-color 0.3s;
+
+    .dark & {
+        border-color: $colour-black;
+        transition: border-color 0.3s;
+    }
+}
+
+.logo {
+    z-index: 1;
+    position: absolute;
+    top: 29px;
+    left: 22px;
+    width: 48.8px;
+    height: 48.8px;
+}
+
+.ctnBurger {
+    position: relative;
+    min-width: 375px;
+    min-height: 95px;
+    width: 100%;
+    height: 100%;
+}
+
+.checkBurger {
+    position: absolute;
+    top: 47px;
+    right: 41px;
+    width: 15px;
+    height: 14px;
+    opacity: 0;
+}
+.close {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    top: 47px;
+    right: 41px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.burger {
+    position: absolute;
+    top: 47px;
+    right: 41px;
+    width: 15px;
+    height: 14px;
+    pointer-events: none;
+}
+
+.menuBurger {
+    display: none;
+    position: absolute;
+}
+.links {
+    padding-top: 17px;
+    min-width: 375px;
+    height: 538px;
+    margin-top: 95px;
+    background-color: $colour-gral;
+    opacity: 50%;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    .dark & {
+        background-color: $colour-black;
+        transition: background-color 0.3s;
+        opacity: 100%;
+    }
+}
+
+.menuBurger .opt {
+    background-color: $colour-gral;
+    position: relative;
+    display: block;
+    color: $colour-white;
+    line-height: 30px;
+    height: 60px;
+    padding-top: 22.5px;
+    font-weight: $bold;
+    font-size: $font-size-s;
+    transition: background-color 0.3s;
+
+    .dark & {
+        background-color: $colour-black;
+        transition: background-color 0.3s;
+    }
+}
+.borderMenu {
+    position: absolute;
+    top: 52px;
+    opacity: 50%;
+    width: 41px;
+    height: 1px;
+    background-color: $colour-white;
+    margin: center;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 31px;
+    font-weight: $bold;
+    font-size: $font-size-xxl;
+    line-height: 33px;
+    transition: background-color 0.3s;
+
+    .dark & {
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+.gifos {
+    color: #5ed7c6;
+}
+.ctnSearch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 31px;
+}
+.imgSearchBar {
+    width: 273px;
+    height: 130px;
+}
+.ctnSearchBar {
+    position: relative;
+    width: 334px;
+    height: 50px;
+}
+.searchBar {
+    outline: none;
+    font-family: $font-family-search-compartir;
+    font-weight: 400;
+    line-height: 19px;
+    font-size: $font-size-m;
+    border-radius: 27px;
+    border: 1px solid $colour-gral;
+    padding-left: 55px;
+    display: block;
+    width: 334px;
+    height: 50px;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+
+    .dark & {
+        background-color: $colour-fondo-Noc;
+        border-color: $colour-white;
+        color: $colour-white;
+        transition-property: background-color, color;
+        transition-duration: 0.3s;
+    }
+}
+
+#ctnSugeridas {
+    padding-top: 20px;
+    position: absolute;
+    width: 334px;
+    height: 150px;
+    padding-left: 26px;
+    top: 366px;
+    z-index: 1000;
+    border-radius: 27px;
+    background-color: white;
+    border: 1px solid #572ee5;
+    line-height: 22px;
+}
+.iconSearch {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+#elemento {
+    left: 10px;
+    margin-top: 10px;
+    font-family: $font-family-search-compartir;
+    font-size: $font-size-m;
+    font-weight: $regular;
+    color: $colour-search-desk;
+}
+
+.trending {
+    text-align: center;
+}
+.tileTrending {
+    font-weight: $bold;
+    font-size: $font-size-xl;
+    line-height: 30px;
+    margin-bottom: 2px;
+    transition: background-color 0.3s;
+
+    .dark & {
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+.pTrending {
+    font-size: $font-size-xs;
+    text-align: center;
+    line-height: 25px;
+    font-weight: $medium;
+    transition: background-color 0.3s;
+
+    .dark & {
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+
+.line {
+    width: 157px;
+    height: 1px;
+    opacity: 50%;
+    margin: auto;
+    background-color: $colour-line;
+    margin-top: 35px;
+    margin-bottom: 43px;
+}
+
+.input {
+    display: block;
+    text-align: center;
+    font-size: $font-size-xxxl;
+    font-weight: $bold;
+    margin-bottom: 66px;
+    transition: background-color 0.3s;
+
+    .dark & {
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+
+.imgSinRes {
+    margin: auto;
+    width: 20%;
+    display: block;
+    margin-top: 20px;
+}
+
+.infosinRes {
+    display: block;
+    text-align: center;
+    color: $colour-sin-Res;
+    margin-top: 20px;
+    font-weight: $bold;
+    line-height: 25px;
+}
+
+.gifosCont,
+.gifosCreadosCont,
+.gifFav {
+    display: grid;
+    justify-content: center;
+    padding-top: 38px;
+    margin-left: 21px;
+    margin-right: 21px;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
+}
+.ctnImg,
+.ctnImgFav,
+.ctnImgGifosCreados {
+    position: relative;
+}
+.imgGif,
+.imgGifFav,
+.imgGifosCreados {
+    min-width: 156px;
+    width: 100%;
+    max-width: 250px;
+    height: 120px;
+}
+
+.ctnBtnVerMasGif {
+    display: flex;
+    justify-content: center;
+}
+
+.btnVerMas {
+    margin-bottom: 33px;
+    body.dark & {
+        color: $colour-fondo-grifos-noc;
+        border: 1px solid $colour-fondo-grifos-noc;
+    }
+}
+
+.trendingGifos {
+    height: 430px;
+    overflow-x: auto;
+    background-color: $colour-fondo-grifos;
+    margin-top: 90px;
+    padding-top: 46px;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    .dark & {
+        background-color: $colour-fondo-grifos-noc;
+        transition: background-color 0.3s;
+    }
+}
+.titletrendingGifos {
+    background-color: $colour-fondo-grifos;
+    margin-bottom: 7px;
+    font-size: $font-size-xl;
+    font-weight: $bold;
+    line-height: 30px;
+    transition: background-color 0.3s;
+
+    .dark & {
+        background-color: $colour-fondo-grifos-noc;
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+.pTGifos {
+    background-color: $colour-fondo-grifos;
+    font-family: $font-family-search-compartir;
+    font-size: $font-size-m;
+    font-weight: $regular;
+    line-height: 23px;
+    color: $colour-black;
+    margin-bottom: 32px;
+    transition-property: background-color, color;
+    transition-duration: 0.3s, 0.3s;
+
+    .dark & {
+        background-color: $colour-fondo-grifos-noc;
+        color: $colour-white;
+        transition-property: background-color, color;
+        transition-duration: 0.3s, 0.3s;
+    }
+}
+.ctnGrifos {
+    display: relative;
+    overflow: hidden;
+}
+.gifosContScroll {
+    background-color: #f3f5f8;
+    overflow: scroll;
+    width: 100%;
+    display: flex;
+    margin-left: 22px;
+    margin-right: 22px;
+    transition: background-color 0.3s;
+    .dark & {
+        background-color: $colour-fondo-grifos-noc;
+        transition: background-color 0.3s;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.imagenesTrending {
+    display: inline-block;
+    min-width: 243px;
+    height: 187px;
+    margin: 0 22px 0 0;
+}
+
+#buttonSliderLeft,
+#buttonSliderRight {
+    display: none;
+}
+
+footer {
+    .dark & {
+        background-color: $colour-fondo-Noc;
+        transition: background-color 0.3s;
+    }
+}
+
+.ctnFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 47px;
+    border-bottom: solid 5px;
+    .dark & {
+        background-color: $colour-fondo-Noc;
+        border-bottom-color: $colour-black;
+    }
+}
+.redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titleCompartir {
+    font-family: $font-family-search-compartir;
+    font-size: $font-size-s;
+    line-height: 18px;
+    font-weight: $regular;
+    transition: background-color 0.3s;
+
+    .dark & {
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+
+.iconos {
+    text-align: center;
+    padding-top: 22px;
+}
+.iFace,
+.iTwi {
+    padding-right: 19px;
+}
+.footText {
+    font-family: $font-family-search-compartir;
+    font-size: $font-size-xs;
+    font-weight: 400;
+    line-height: 20px;
+    color: $colour-black;
+    margin-top: 46px;
+    margin-bottom: 23px;
+    transition: background-color 0.3s;
+
+    .dark & {
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+
+#imgFavorites {
+    margin-top: 5px;
+    display: block;
+    margin: auto;
+}
+
+.tileFavorites {
+    display: block;
+    text-align: center;
+    font-size: $font-size-xl;
+    line-height: 30px;
+    font-weight: $bold;
+    margin-top: 7px;
+    margin-bottom: 46px;
+    transition: background-color 0.3s;
+
+    .dark & {
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+
+.btnVerMas {
+    outline: none;
+    width: 127px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid;
+    font-size: $font-size-xxs;
+    line-height: 16px;
+    font-weight: $bold;
+    background-color: $colour-white;
+    display: block;
+    margin-top: 78px;
+}
+
+#imgMisGifos {
+    margin-top: 5px;
+    margin: auto;
+    display: block;
+}
+
+.tileMisGifos {
+    display: block;
+    text-align: center;
+    font-size: $font-size-xl;
+    line-height: 30px;
+    font-weight: $bold;
+    margin-top: 6px;
+    margin-bottom: 46px;
+    transition: background-color 0.3s;
+    .dark & {
+        color: $colour-white;
+        transition: background-color 0.3s;
+    }
+}
+
+#btnVerMasGifos {
+    display: none;
+
+    @extend .btnVerMas;
+    margin: auto;
+    margin-bottom: 31px;
+    transition: background-color 0.3s;
+    .dark & {
+        color: $colour-btn-noc;
+        border: 1px solid $colour-btn-noc;
+        transition: background-color 0.3s;
+    }
+}
+
+@media (min-width: 600px) {
+    #btnVerMasGifos,
+    .brMobile {
+        display: none;
+    }
+    .brdesktop {
+        display: block;
+    }
+    .crearGifo {
+        display: none;
+    }
+    .gifosCont,
+    .gifFav {
+        grid-template-columns: auto auto auto;
+    }
+    #ctnSugeridas {
+        top: 333px;
+    }
+}
+
+@media (min-width: 1440px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #ico {
+        opacity: 1;
+    }
+    .crearGifo {
+        display: contents;
+    }
+
+    .logo {
+        position: absolute;
+        top: 18px;
+        left: 156px;
+        width: 59.1px;
+        height: 59.1px;
+        z-index: 2;
+    }
+    .ctnBurger {
+        position: relative;
+        min-width: 1440px;
+        min-height: 90px;
+        height: 90px;
+        width: 100%;
+    }
+    .checkBurger,
+    .close,
+    .burger {
+        display: none;
+    }
+
+    .menuBurger {
+        display: contents;
+    }
+    .links {
+        display: flex;
+        justify-content: space-between;
+        width: 1440px;
+        height: 90px;
+        margin-top: 0px;
+        margin-left: 0px;
+        background-color: $colour-white;
+        opacity: 100%;
+        text-align: initial;
+        padding-left: 797px;
+        padding-top: 0px;
+        padding-right: 156px;
+        transition: background-color, 0.3s;
+        .dark & {
+            background-color: $colour-fondo-Noc;
+            transition: background-color, 0.3s;
+        }
+    }
+    .menuBurger .opt {
+        background-color: $colour-white;
+        display: inline-block;
+        color: $colour-gral;
+        margin-top: 0px;
+        font-weight: $bold;
+        font-size: $font-size-xxs;
+        line-height: 16px;
+        text-align: right;
+        padding-top: 41px;
+        transition-property: background-color, color;
+        transition-duration: 0.3s;
+
+        .dark & {
+            background-color: $colour-fondo-Noc;
+            color: $colour-white;
+            transition-property: background-color, color;
+            transition-duration: 0.3s;
+        }
+
+        &.clickStyleFavDesk {
+            color: $colour-clikFav-Desktop;
+        }
+    }
+    .borderMenu {
+        display: none;
+    }
+    .crearGifo {
+        display: contents;
+        display: inline-block;
+        margin-top: 18px;
+        height: 54px;
+        width: 54px;
+    }
+    .title {
+        padding-top: 76px;
+        padding-bottom: 27px;
+        font-size: $font-size-xxxxl;
+        line-height: 50px;
+    }
+    .ctnSearch {
+        margin-bottom: 73px;
+    }
+    .imgSearchBar {
+        width: 399px;
+        height: 190px;
+    }
+    .ctnSearchBar {
+        width: 551px;
+        height: 50px;
+    }
+    .searchBar {
+        padding-left: 54px;
+        color: #9cafc3;
+        width: 100%;
+        height: 100%;
+    }
+
+    #ctnSugeridas {
+        width: 551px;
+        height: 150px;
+        top: 366px;
+        margin-top: 121px;
+        padding-left: 33px;
+        background-color: white;
+    }
+
+    #elemento {
+        left: 10px;
+        margin-top: 10px;
+        font-family: $font-family-search-compartir;
+        font-size: $font-size-m;
+        font-weight: $regular;
+        color: $colour-search-desk;
+    }
+
+    .iconSearch {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .tileTrending {
+        font-size: $font-size-l;
+        line-height: 25px;
+        margin-bottom: 7px;
+    }
+    .pTrending {
+        font-size: $font-size-m;
+    }
+
+    .line {
+        width: 338px;
+        height: 1px;
+        margin: auto;
+        background-color: $colour-line;
+        margin-top: 105px;
+        margin-bottom: 40px;
+    }
+
+    .input {
+        display: block;
+        text-align: center;
+        font-size: $font-size-xxxxl;
+        margin-bottom: 109px;
+    }
+
+    .imgSinRes {
+        margin: auto;
+        width: 150px;
+        display: block;
+    }
+
+    .infosinRes {
+        display: block;
+        text-align: center;
+        color: $colour-sin-Res;
+        margin-top: 29px;
+        margin-bottom: 74px;
+        font-weight: $bold;
+        font-size: $font-size-xll;
+    }
+    .gifosCont,
+    .gifFav,
+    .gifosCreadosCont {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .imgGifFav,
+    .imgGif,
+    .imgGifCreados,
+    .imgGifosCreados {
+        max-width: 260px;
+        height: 200px;
+    }
+
+    .pelicula,
+    .peliculaFav,
+    .peliculaCreados {
+        display: initial;
+        position: absolute;
+        top: 0;
+        margin-left: 0px;
+        max-width: 260px;
+        height: 200px;
+        min-width: 156px;
+        width: 100%;
+        background: #572ee5;
+        opacity: 70%;
+        z-index: 1;
+    }
+    .ctnIconSearchGifos,
+    .ctnIconSearchGifosFav,
+    .ctnIconSearchGifosCreados {
+        position: absolute;
+        flex-direction: row;
+        justify-content: space-between;
+        top: 0px;
+        right: 0px;
+        z-index: 2;
+    }
+    .icnSearch {
+        margin-right: 10px;
+        margin-top: 10px;
+        height: 32px;
+        width: 32px;
+        opacity: 70%;
+        border-radius: 6px;
+    }
+
+    #btnVerMasFavGif {
+        margin-top: 78px;
+    }
+
+    .trendingGifos {
+        display: flex;
+        flex-direction: column;
+        height: 640px;
+        background-color: #f3f5f8;
+        margin-top: 95px;
+        padding-top: 67px;
+    }
+    .titletrendingGifos {
+        margin-bottom: 12px;
+        font-size: $font-size-xxl;
+    }
+    .pTGifos {
+        font-size: $font-size-l;
+        line-height: 21px;
+        margin-bottom: 53px;
+    }
+    .ctnGrifos {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .gifosContScroll {
+        background-color: #f3f5f8;
+        overflow: hidden;
+        width: 1150px;
+        display: flex;
+        justify-content: center;
+        padding-left: 22px;
+        transition: background-color 0.3s;
+        .dark & {
+            background-color: $colour-fondo-grifos-noc;
+            transition: background-color 0.3s;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .imagenesTrending {
+        display: inline-block;
+        min-width: 357px;
+        height: 275px;
+        margin: 0 22px 0 0;
+    }
+    .ctnLeftRight {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #buttonSliderLeft {
+        display: initial;
+        width: 40px;
+        height: 40px;
+        margin-left: 94px;
+        margin-top: 117px;
+    }
+
+    #buttonSliderRight {
+        display: initial;
+        width: 40px;
+        height: 40px;
+        margin-right: 94px;
+        margin-top: 117px;
+    }
+
+    .ctnFooter {
+        display: flex;
+        flex-direction: row;
+        align-items: initial;
+        padding-top: 26px;
+        height: 116px;
+        margin-top: 0px;
+    }
+    .ctnRedes {
+        display: flex;
+    }
+    .redes {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: initial;
+        justify-content: space-between;
+    }
+    .titleCompartir {
+        font-size: 13px;
+        line-height: 15px;
+        padding-left: 156px;
+        padding-right: 17px;
+        height: 15px;
+    }
+    .iconos {
+        text-align: center;
+        padding-top: 0px;
+        height: 19px;
+    }
+    .iFace,
+    .iTwi {
+        padding-right: 19px;
+    }
+    .footText {
+        font-family: $font-family-search-compartir;
+        font-size: $font-size-xs;
+        color: $colour-black;
+        line-height: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 158px;
+        height: 19px;
+    }
+
+    .imgFavorites {
+        margin-top: 11px;
+    }
+
+    .tileFavorites {
+        font-size: $font-size-xxl;
+        margin-top: 8px;
+
+        .dark & {
+            color: $colour-white;
+        }
+    }
+    .favSinCont {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    #imgFavSinCont {
+        width: 150px;
+        height: 151px;
+        margin: auto;
+        margin-top: 109.3px;
+        margin-bottom: 23.7px;
+    }
+
+    .textSinFavDesk {
+        font-size: $font-size-xll;
+        color: $colour-sin-Res;
+        font-weight: $bold;
+        line-height: 33px;
+    }
+
+    .btnVerMas {
+        margin-bottom: 79px;
+        .dark & {
+            color: $colour-btn-noc;
+            border: 1px solid $colour-btn-noc;
+        }
+    }
+
+    .imgMisGifos {
+        margin-top: 10px;
+    }
+
+    .tileMisGifos {
+        text-align: center;
+        font-size: $font-size-xxl;
+        line-height: 30px;
+        font-weight: $bold;
+        margin-top: 8.1px;
+        margin-bottom: 36px;
+        transition: background-color 0.3s;
+        .dark & {
+            color: $colour-white;
+            transition: background-color 0.3s;
+        }
+    }
+
+    .gifSinCont {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    #imgGifSinCont {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        margin-top: 111px;
+        margin-bottom: 40px;
+    }
+
+    .textSinGifDesk {
+        font-size: $font-size-xll;
+        color: $colour-sin-Res;
+        font-weight: $bold;
+        line-height: 25px;
+    }
+
+    .btnVerMas {
+        margin: auto;
+        margin-bottom: 31px;
+        transition: background-color 0.3s;
+        .dark & {
+            color: $colour-btn-noc;
+            border: 1px solid $colour-btn-noc;
+            transition: background-color 0.3s;
+        }
+    }
+}
+
+.ctnGralCrearGifo {
+    flex-direction: row;
+}
+#ctnGralCamara {
+    margin-left: 241.8px;
+}
+#camara {
+    margin-top: 162px;
+    height: 106.8px;
+    opacity: 100%;
+}
+#luz {
+    margin-bottom: 5px;
+    margin-right: 4px;
+    height: 151px;
+    width: 91px;
+}
+
+#cinta1 {
+    position: absolute;
+    width: 45.9px;
+    top: 223.3px;
+    left: 228px;
+}
+#cinta2 {
+    position: absolute;
+    width: 63.6px;
+    top: 208.6px;
+    left: 277px;
+}
+
+.ctnCentralCrearGifo {
+    display: inline-block;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 67px;
+}
+.rectangulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 688px;
+    height: 390px;
+    border: 1px solid;
+    border-color: $colour-gral;
+    opacity: 100%;
+}
+.titleCrearGifo {
+    font-weight: $bold;
+    font-size: $font-size-xxl;
+    line-height: 35px;
+    top: 138px;
+}
+
+.subTitleCrearGifo {
+    font-size: $font-size-m;
+    font-family: $font-family-search-compartir;
+    font-weight: $regular;
+    line-height: 29px;
+    top: 207px;
+    color: $colour-black;
+}
+
+#gifoOk {
+    font-size: $font-size-s;
+    line-height: 19px;
+    color: $colour-white;
+    font-weight: $bold;
+}
+
+.btnesCrearGifo {
+    display: flex;
+    justify-content: center;
+}
+.pasos {
+    outline: none;
+    width: 32px;
+    height: 32px;
+    border: 1px solid;
+    border-radius: 100%;
+    line-height: 21px;
+    font-size: $font-size-l;
+    font-family: $font-family-search-compartir;
+    font-weight: $bold;
+    margin-top: 24px;
+    padding-top: 5px;
+    margin-right: 26px;
+    outline: none;
+}
+#cinta {
+    position: absolute;
+    margin-left: 1219px;
+    margin-top: 412px;
+    width: 87.2px;
+}
+
+.ctnSeparador {
+    flex-direction: column;
+    padding-left: 403px;
+}
+
+.separador {
+    width: 795.9px;
+    height: 6.9px;
+    opacity: 100%;
+    background-color: $colour-gral;
+    margin-top: 19px;
+}
+
+.btn {
+    margin-top: 20.1px;
+    width: 127px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 25px;
+    border-color: $colour-gral;
+    font-weight: $bold;
+    font-size: $font-size-xxs;
+    line-height: 16px;
+    opacity: 100%;
+    background-color: $colour-white;
+    margin-left: 310px;
+    outline: none;
+}
+.CtnRepetirCaptura {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#repetirCaptura {
+    position: absolute;
+    font-weight: $bold;
+    font-size: $font-size-xxs;
+    line-height: 16px;
+    right: 293px;
+    top: 559px;
+}
+.subRepetir {
+    width: 122.9px;
+    height: 1px;
+    opacity: 100%;
+    background-color: $colour-subrayado;
+}
+#ctnAmp,
+#ctnAmpG,
+#ctnAmpCreados {
+    position: relative;
+    margin-top: -72px;
+    width: 695px;
+    //height: 385px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ampliar {
+    width: 90%;
+    height: 80%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.closeAmpl {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 3%;
+}
